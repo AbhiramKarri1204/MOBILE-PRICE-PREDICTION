@@ -1,0 +1,372 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Mobile Price Prediction</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #prediction-result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mobile Price Prediction</h1>
+        background-image:"MTS_littledica-1910405-1.jpg";
+        <form id="prediction-form">
+            <div class="input-group">
+                <label for="ram">RAM (GB):</label>
+                <select class="form-select" id="ram" name="ram" required>
+                    <option selected disabled>Choose RAM</option>
+                    <option value="4">4 GB</option>
+                    <option value="6">6 GB</option>
+                    <option value="8">8 GB</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="rom">ROM (Storage) (GB):</label>
+                <select class="form-select" id="rom" name="rom" required>
+                    <option selected disabled>Choose ROM</option>
+                    <option value="64">64 GB</option>
+                    <option value="128">128 GB</option>
+                    <option value="256">256 GB</option>
+                    <option value="512">512 GB</option>
+                    <option value="1024">1 TB</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="processor">Processor Type:</label>
+                <select id="processor" name="processor" required onchange="updateProcessorVersions()">
+                    <option selected disabled>Choose Processor Type</option>
+                    <option value="snapdragon">Snapdragon</option>
+                    <option value="mediatek">MediaTek</option>
+                    <option value="exynos">Exynos</option>
+                    <option value="apple">Apple</option>
+                    <option value="pixel_visual_core">pixel</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="processor-version">Processor Version:</label>
+                <select id="processor-version" name="processor-version" required>
+                    <option selected disabled>Choose Processor Version</option>
+                    <option value="s1">snapdragon 8 Gen1</option>
+                    <option value="s2">snapdragon 8 Gen2</option>
+                    <option value="s3">snapdragon 8 Gen3</option>
+                    <option value="s4">snapdragon 8 Elite</option>
+                    <option value="m1">mediatex dimensity 6030</option>
+                    <option value="m2">mediatex dimensity 6300</option>
+                    <option value="m3">mediatex dimensity 7050</option>
+                    <option value="m4">mediatex dimensity 7300</option>
+                    <option value="m5">mediatex dimensity 9300</option>
+                    <option value="q1">Qualcomm 1</option>
+                    <option value="q2">Qualcomm 2</option>
+                    <option value="q3">Qualcomm 3</option>
+                    <option value="a1">A 15 Bionic</option>
+                    <option value="a2">A 16 Bionic</option>
+                    <option value="a3">A 17 Bionic</option>
+                    <option value="p1">Tensor G1</option>
+                    <option value="p2">Tensor G2</option>
+                    <option value="p3">Tensor G3</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="camera">Camera Quality:</label>
+                <select class="form-select" id="camera" name="camera" required>
+                    <option selected disabled>Choose Camera Quality</option>
+                    <option value="16">16 MP</option>
+                    <option value="48">48 MP</option>
+                    <option value="50">50 MP</option>
+                    <option value="64">64 MP</option>
+                    <option value="108">108 MP</option>
+                    <option value="2K">2K</option>
+                    <option value="4K">4K</option>
+                </select>
+            </div>
+            <button type
+             -->
+
+
+             <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mobile Price Predict</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        #prediction-result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            text-align: center;
+        }
+
+    .bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    
+    }
+
+        /* Content over the video */
+        .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center 100%,24px ;
+        width: 100%;
+        font-size: 24px;
+            
+    }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mobile Price Predict</h1>
+        <form id="prediction-form" onsubmit="return predictPrice(event)">
+            <div class="input-group">
+                <label for="ram">RAM (GB):</label>
+                <select class="form-select" id="ram" name="ram" required>
+                    <option selected disabled>Choose RAM</option>
+                    <option value="4">4 GB</option>
+                    <option value="6">6 GB</option>
+                    <option value="8">8 GB</option>
+                    <option value="12">12 GB</option>
+                    <option value="16">16 GB</option>
+
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="rom">ROM (Storage) (GB):</label>
+                <select class="form-select" id="rom" name="rom" required>
+                    <option selected disabled>Choose ROM</option>
+                    <option value="64">64 GB</option>
+                    <option value="128">128 GB</option>
+                    <option value="256">256 GB</option>
+                    <option value="512">512 GB</option>
+                    <option value="1024">1 TB</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="processor">Processor Type:</label>
+                <select id="processor" name="processor" required onchange="updateProcessorVersions()">
+                    <option selected disabled>Choose Processor Type</option>
+                    <option value="snapdragon">Snapdragon</option>
+                    <option value="mediatek">MediaTek</option>
+                    <option value="exynos">Exynos</option>
+                    <option value="apple">Apple</option>
+                    <option value="pixel_visual_core">Pixel</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="processor-version">Processor Version:</label>
+                <select id="processor-version" name="processor-version" required>
+                    <option selected disabled>Choose Processor Version</option>
+                    <option value="s1">Snapdragon 8 Gen1</option>
+                    <option value="s2">Snapdragon 8 Gen2</option>
+                    <option value="s3">Snapdragon 8 Gen3</option>
+                    <option value="s4">Snapdragon 8 Elite</option>
+                    <option value="m1">MediaTek Dimensity 6030</option>
+                    <option value="m2">MediaTek Dimensity 6300</option>
+                    <option value="m3">MediaTek Dimensity 7050</option>
+                    <option value="m4">MediaTek Dimensity 7300</option>
+                    <option value="m5">MediaTek Dimensity 9300</option>
+                    <option value="q1">Qualcomm 1</option>
+                    <option value="q2">Qualcomm 2</option>
+                    <option value="q3">Qualcomm 3</option>
+                    <option value="a1">A 15 Bionic</option>
+                    <option value="a2">A 16 Bionic</option>
+                    <option value="a3">A 17 Bionic</option>
+                    <option value="p1">Tensor G1</option>
+                    <option value="p2">Tensor G2</option>
+                    <option value="p3">Tensor G3</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="camera">Camera Quality:</label>
+                <select class="form-select" id="camera" name="camera" required>
+                    <option selected disabled>Choose Camera Quality</option>
+                    <option value="16">16 MP</option>
+                    <option value="48">48 MP</option>
+                    <option value="50">50 MP</option>
+                    <option value="64">64 MP</option>
+                    <option value="108">108 MP</option>
+                </select>
+            </div>
+            <button type="submit">Predict Price</button>
+        </form>
+        <div id="prediction-result" class="hidden"></div>
+    </div>
+
+    <script>
+        function updateProcessorVersions() {
+            // Logic to update processor versions based on selected processor type can be added here
+        }
+
+        function predictPrice(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const ram = document.getElementById('ram').value;
+            const rom = document.getElementById('rom').value;
+            const processor = document.getElementById('processor').value;
+            const processorVersion = document.getElementById('processor-version').value;
+            const camera = document.getElementById('camera').value;
+
+            // Mock prediction logic (replace with actual prediction logic)
+            const predictedPrice = (parseInt(ram) + parseInt(rom) / 10 + (camera / 10) + (processor === 'snapdragon' ? 100 : 50)).toFixed(2);
+
+            // Display the prediction result
+            const resultDiv = document.getElementById('prediction-result');
+            resultDiv.textContent = `Predicted Price: $${predictedPrice}`;
+            resultDiv.classList.remove('hidden');
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>
